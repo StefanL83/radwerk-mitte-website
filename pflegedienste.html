@@ -19,8 +19,8 @@
   }
   *{ box-sizing:border-box; }
   body{ margin:0; background:var(--surface); color:var(--ink); font-family:var(--font-sans); width:100%; max-width:100%; overflow-x:hidden; }
-  h1,h2,h3{ font-family:var(--font-display); font-weight:700; margin:0; text-wrap:balance; }
-  p{ margin:0; }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; margin:0; text-wrap:balance; overflow-wrap:break-word; }
+  p{ margin:0; overflow-wrap:break-word; }
   a{ color:var(--orange-strong); }
   a:hover{ color:var(--navy); }
   button{ font-family:inherit; cursor:pointer; }
@@ -108,7 +108,7 @@
     </div>
     <div class="card" style="display:flex; flex-direction:column; gap:14px;">
       <p style="color:var(--ink-muted); font-size:16px; line-height:25px;">Radwerk Mitte bietet in dieser ersten Ausbaustufe keinen zugesagten Nachtdienst und keinen durchgehenden Chat-Support an. Für Mitarbeitende im Nacht- oder Wochenenddienst bedeutet ein technischer Defekt also aktuell: Reparatur zu den regulären Öffnungszeiten der Werkstatt in Kassel oder Göttingen.</p>
-      <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); display:flex; gap:12px; align-items:flex-start;">
+      <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;">
         <span class="pill-badge badge-draft" style="flex:0 0 auto;">Beispielidee</span>
         <p style="font-size:14px; line-height:21px; color:var(--orange-strong);">Denkbar für die Zukunft wäre ein Ersatzteil-Automat für kleinere Reparaturen außerhalb der Öffnungszeiten. Das ist eine Beispielidee für diese Übung – kein realer Standort und keine bestätigte Planung von Radwerk.</p>
       </div>
@@ -149,8 +149,27 @@
   </div>
 </section>
 
-<footer class="section" style="background:var(--navy); color:#fff; padding-top:40px; padding-bottom:40px;">
-  <div class="section-inner">
+<footer class="section" style="background:var(--navy); color:#fff; padding-top:56px; padding-bottom:40px;">
+  <div class="section-inner" style="display:flex; flex-direction:column; gap:32px;">
+    <div style="display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#FFFFFF"/><path d="M45.93 22.25 A17 17 0 1 1 33.48 15.07" fill="none" stroke="#10284A" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="32" r="6" fill="#FF6A00"/></svg>
+        <span style="font-family:var(--font-display); font-weight:700; font-size:18px;">radwerk mitte</span>
+      </div>
+      <div style="display:flex; gap:48px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:8px; font-size:14px;">
+          <span style="color:#AFC0D6; font-weight:700; text-transform:uppercase; letter-spacing:.06em; font-size:12px;">Kassel</span>
+          <span style="color:#fff;">[Adresse Kassel – Platzhalter]</span>
+          <span style="color:#fff;">[Telefon Kassel – Platzhalter]</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px; font-size:14px;">
+          <span style="color:#AFC0D6; font-weight:700; text-transform:uppercase; letter-spacing:.06em; font-size:12px;">Göttingen</span>
+          <span style="color:#fff;">[Adresse Göttingen – Platzhalter]</span>
+          <span style="color:#fff;">[Telefon Göttingen – Platzhalter]</span>
+        </div>
+      </div>
+    </div>
+    <div style="height:1px; background:#2A4873;"></div>
     <p style="color:#8CA0BC; font-size:13px;">Seiteninhalt für die Zielgruppe Pflegedienste, Stand 20.10.2026 – Entwurf, noch nicht final mit Radwerk abgestimmt. Die als "Beispielidee" markierten Inhalte sind keine bestätigte Planung.</p>
   </div>
 </footer>

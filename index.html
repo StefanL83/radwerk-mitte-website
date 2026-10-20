@@ -19,8 +19,8 @@
   }
   *{ box-sizing:border-box; }
   body{ margin:0; background:var(--surface); color:var(--ink); font-family:var(--font-sans); width:100%; max-width:100%; overflow-x:hidden; }
-  h1,h2,h3{ font-family:var(--font-display); font-weight:700; margin:0; text-wrap:balance; }
-  p{ margin:0; }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; margin:0; text-wrap:balance; overflow-wrap:break-word; }
+  p{ margin:0; overflow-wrap:break-word; }
   a{ color:var(--orange-strong); }
   a:hover{ color:var(--navy); }
   button{ font-family:inherit; cursor:pointer; }
@@ -89,14 +89,14 @@
   <div class="section-inner" style="display:flex; gap:48px; flex-wrap:wrap; align-items:center;">
     <div style="flex:1 1 480px; min-width:0; display:flex; flex-direction:column; gap:20px;">
       <span class="eyebrow" style="color:var(--orange);">Dienstrad-Leasing für Unternehmen</span>
-      <h1 style="font-size:48px; line-height:1.08; color:#fff;">Räder für dein ganzes Team – mit einem Ansprechpartner vor Ort.</h1>
+      <h1 style="font-size:clamp(32px, 9vw, 48px); line-height:1.08; color:#fff;">Räder für dein ganzes Team – mit einem Ansprechpartner vor Ort.</h1>
       <p style="font-size:18px; line-height:28px; color:#D7E0EC; max-width:56ch;">Radwerk Mitte stattet Unternehmen in Kassel und Göttingen mit Dienstädern aus: planbare Kosten, feste Rückmeldezeiten und Werkstatt-Service aus einer Hand – kein anonymes Großportal.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; padding-top:8px;">
         <a href="#fuer-unternehmen" class="btn btn-primary">Für Unternehmen</a>
         <a href="#rechner" class="btn btn-outline" style="border-color:#D7E0EC; color:#fff;">Ablauf ansehen</a>
       </div>
     </div>
-    <div style="flex:1 1 360px; min-width:280px;">
+    <div style="flex:1 1 360px; min-width:min(280px, 100%);">
       <div style="background:var(--navy-2); border-radius:var(--radius-xl); padding:32px; display:flex; flex-direction:column; gap:20px;">
         <div style="display:flex; justify-content:space-between; align-items:baseline;">
           <span style="color:#AFC0D6; font-size:14px;">Beispiel Großauftrag</span>
@@ -173,12 +173,12 @@
       <span class="eyebrow">Leasing-Rechner</span>
       <h2 style="font-size:34px;">Was würde dein Dienstrad im Monat kosten?</h2>
     </div>
-    <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); margin-bottom:28px; display:flex; gap:12px; align-items:flex-start;">
+    <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); margin-bottom:28px; display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;">
       <span class="pill-badge badge-draft" style="flex:0 0 auto;">Beispiel</span>
       <p style="font-size:14px; line-height:21px; color:var(--orange-strong);">Platzhalter-Formel für den Entwurf. Die echten Leasingkonditionen und Partner liegen noch nicht vor – vor dem Launch mit echten Werten von Radwerk ersetzen.</p>
     </div>
     <div style="display:flex; gap:32px; flex-wrap:wrap;">
-      <div style="flex:1 1 360px; min-width:280px; display:flex; flex-direction:column; gap:24px;">
+      <div style="flex:1 1 360px; min-width:min(280px, 100%); display:flex; flex-direction:column; gap:24px;">
         <div class="field">
           <label for="radpreis">Radpreis: <span class="num-out"><span id="radpreisLabel">2.500</span> €</span></label>
           <input id="radpreis" type="range" min="500" max="6000" step="50" value="2500">
@@ -188,7 +188,7 @@
           <input id="brutto" type="range" min="1500" max="8000" step="50" value="3800">
         </div>
       </div>
-      <div style="flex:1 1 300px; min-width:260px;">
+      <div style="flex:1 1 300px; min-width:min(260px, 100%);">
         <div class="card" style="background:var(--navy); border-color:var(--navy); color:#fff; height:100%; display:flex; flex-direction:column; gap:10px; justify-content:center;">
           <span style="color:#AFC0D6; font-size:14px;">Geschätzte monatliche Belastung</span>
           <div class="num-out" style="font-size:48px; color:#fff;"><span id="rateLabel">102</span> €</div>
@@ -225,7 +225,7 @@
       <span class="eyebrow">Häufige Fragen</span>
       <h2 style="font-size:34px;">FAQ</h2>
     </div>
-    <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); margin-bottom:28px; display:flex; gap:12px; align-items:flex-start;">
+    <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); margin-bottom:28px; display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;">
       <span class="pill-badge badge-draft" style="flex:0 0 auto;">Beispiel</span>
       <p style="font-size:14px; line-height:21px; color:var(--orange-strong);">Beispiel-FAQ für den Entwurf – Inhalte vor Launch mit dem Kundenservice (Amara Osei) abstimmen.</p>
     </div>
@@ -263,7 +263,7 @@
 </section>
 <section class="section" style="background:var(--surface-alt);" id="kontakt">
   <div class="section-inner" style="display:flex; gap:48px; flex-wrap:wrap;">
-    <div style="flex:1 1 320px; min-width:280px; display:flex; flex-direction:column; gap:14px;">
+    <div style="flex:1 1 320px; min-width:min(280px, 100%); display:flex; flex-direction:column; gap:14px;">
       <span class="eyebrow">Kontakt</span>
       <h2 style="font-size:32px;">Anfrage stellen</h2>
       <p style="color:var(--ink-muted); font-size:16px; line-height:25px;">Wähle eine Kategorie, damit deine Anfrage direkt an die richtige Person geht.</p>
@@ -271,7 +271,7 @@
         <p style="font-size:14px; color:var(--ink-muted); line-height:22px;">Formular-Entwurf. Versand und Weiterleitung per E-Mail werden in der technischen Umsetzung ergänzt.</p>
       </div>
     </div>
-    <div style="flex:2 1 420px; min-width:300px;">
+    <div style="flex:2 1 420px; min-width:min(300px, 100%);">
       <div class="card" id="contact-thanks" style="background:var(--orange-soft); border-color:var(--orange-soft);" hidden>
         <h3 style="font-size:20px; color:var(--orange-strong); margin-bottom:8px;">Danke für die Anfrage.</h3>
         <p style="color:var(--orange-strong); font-size:15px;">Dies ist ein Entwurf – im echten Betrieb würde hier eine Bestätigung mit Rückmeldezeit stehen.</p>
@@ -295,16 +295,16 @@
         <div class="grid-2">
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Vor- und Nachname">
+            <input id="name" type="text" placeholder="Vor- und Nachname" required>
           </div>
           <div class="field">
             <label for="email">E-Mail</label>
-            <input id="email" type="email" placeholder="name@firma.de">
+            <input id="email" type="email" placeholder="name@firma.de" required>
           </div>
         </div>
         <div class="field">
           <label for="nachricht">Nachricht</label>
-          <textarea id="nachricht" placeholder="Wie können wir helfen?"></textarea>
+          <textarea id="nachricht" placeholder="Wie können wir helfen?" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Anfrage senden</button>
       </form>
@@ -384,6 +384,7 @@
   contactForm.addEventListener("submit", function(e){
     e.preventDefault();
     contactForm.hidden = true;
+    contactForm.style.display = "none";
     contactThanks.hidden = false;
   });
 
