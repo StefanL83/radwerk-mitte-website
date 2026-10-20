@@ -43,7 +43,8 @@
   @media (max-width:860px){ .grid-3{ grid-template-columns:1fr; } .grid-2{ grid-template-columns:1fr; } }
   .nav-dropdown{ position:relative; display:flex; align-items:center; gap:2px; }
   .nav-dropdown-toggle{ background:none; border:none; padding:4px; font-size:11px; color:var(--ink-muted); line-height:1; }
-  .nav-dropdown-menu{ position:absolute; top:100%; left:0; margin-top:10px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); box-shadow:0 16px 32px rgba(16,40,74,0.14); padding:8px; min-width:190px; }
+  .nav-dropdown-menu{ position:absolute; top:100%; left:0; margin-top:10px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); box-shadow:0 16px 32px rgba(16,40,74,0.14); padding:8px; min-width:190px; display:none; }
+  .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu{ display:block; }
   .nav-dropdown-menu a{ display:block; padding:8px 12px; border-radius:var(--radius-sm); text-decoration:none; color:var(--ink); font-weight:600; font-size:14px; white-space:nowrap; }
   .nav-dropdown-menu a:hover{ background:var(--surface-alt); color:var(--navy); }
 </style>
@@ -59,10 +60,10 @@
       <span class="pill-badge badge-draft">Entwurf</span>
     </div>
     <nav style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-weight:600; font-size:15px;">
-      <div class="nav-dropdown">
-        <a href="index.html#fuer-unternehmen" style="text-decoration:none; color:var(--ink);">Für Unternehmen</a>
+      <div class="nav-dropdown" data-nav-dropdown>
+        <a href="index.html#fuer-unternehmen" data-nav-dropdown-label style="text-decoration:none; color:var(--ink);">Für Unternehmen</a>
         <button type="button" class="nav-dropdown-toggle" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Untermenü Für Unternehmen öffnen">▾</button>
-        <div class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+        <div class="nav-dropdown-menu" data-nav-dropdown-menu>
           <a href="pflegedienste.html">Pflegedienste</a>
         </div>
       </div>
@@ -155,22 +156,37 @@
 </footer>
 
 <script>
+  var navDropdown = document.querySelector("[data-nav-dropdown]");
+  var navDropdownLabel = document.querySelector("[data-nav-dropdown-label]");
   var navDropdownToggle = document.querySelector("[data-nav-dropdown-toggle]");
-  var navDropdownMenu = document.querySelector("[data-nav-dropdown-menu]");
+
+  function openNavDropdown(){
+    navDropdown.classList.add("is-open");
+    navDropdownToggle.setAttribute("aria-expanded", "true");
+  }
+  function closeNavDropdown(){
+    navDropdown.classList.remove("is-open");
+    navDropdownToggle.setAttribute("aria-expanded", "false");
+  }
+
   navDropdownToggle.addEventListener("click", function(e){
     e.stopPropagation();
-    var isOpen = !navDropdownMenu.hidden;
-    navDropdownMenu.hidden = isOpen;
-    navDropdownToggle.setAttribute("aria-expanded", String(!isOpen));
+    if (navDropdown.classList.contains("is-open")) {
+      closeNavDropdown();
+    } else {
+      openNavDropdown();
+    }
+  });
+  navDropdownLabel.addEventListener("click", function(e){
+    e.stopPropagation();
+    openNavDropdown();
   });
   document.addEventListener("click", function(){
-    navDropdownMenu.hidden = true;
-    navDropdownToggle.setAttribute("aria-expanded", "false");
+    closeNavDropdown();
   });
   document.addEventListener("keydown", function(e){
     if (e.key === "Escape") {
-      navDropdownMenu.hidden = true;
-      navDropdownToggle.setAttribute("aria-expanded", "false");
+      closeNavDropdown();
     }
   });
 </script>
