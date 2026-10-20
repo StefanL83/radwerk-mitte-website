@@ -51,18 +51,31 @@
   .field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--orange-strong); }
   .num-out{ font-family:var(--font-display); font-weight:700; }
   input[type="range"]{ width:100%; accent-color:var(--orange); }
+  .nav-dropdown{ position:relative; display:flex; align-items:center; gap:2px; }
+  .nav-dropdown-toggle{ background:none; border:none; padding:4px; font-size:11px; color:var(--ink-muted); line-height:1; }
+  .nav-dropdown-menu{ position:absolute; top:100%; left:0; margin-top:10px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); box-shadow:0 16px 32px rgba(16,40,74,0.14); padding:8px; min-width:190px; }
+  .nav-dropdown-menu a{ display:block; padding:8px 12px; border-radius:var(--radius-sm); text-decoration:none; color:var(--ink); font-weight:600; font-size:14px; white-space:nowrap; }
+  .nav-dropdown-menu a:hover{ background:var(--surface-alt); color:var(--navy); }
 </style>
 </head>
 <body>
 <header style="position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--line);">
   <div style="max-width:1180px; margin:0 auto; padding:14px max(16px, env(safe-area-inset-left,0px)); display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
     <div style="display:flex; align-items:center; gap:12px;">
-      <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#10284A"/><path d="M45.93 22.25 A17 17 0 1 1 33.48 15.07" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="32" r="6" fill="#FF6A00"/></svg>
-      <span style="font-family:var(--font-display); font-weight:700; font-size:20px;">radwerk <span style="color:var(--orange-strong);">mitte</span></span>
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
+        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#10284A"/><path d="M45.93 22.25 A17 17 0 1 1 33.48 15.07" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="32" r="6" fill="#FF6A00"/></svg>
+        <span style="font-family:var(--font-display); font-weight:700; font-size:20px; color:var(--ink);">radwerk <span style="color:var(--orange-strong);">mitte</span></span>
+      </a>
       <span class="pill-badge badge-draft">Entwurf</span>
     </div>
     <nav style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-weight:600; font-size:15px;">
-      <a href="#fuer-unternehmen" style="text-decoration:none; color:var(--ink);">Für Unternehmen</a>
+      <div class="nav-dropdown">
+        <a href="index.html#fuer-unternehmen" style="text-decoration:none; color:var(--ink);">Für Unternehmen</a>
+        <button type="button" class="nav-dropdown-toggle" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Untermenü Für Unternehmen öffnen">▾</button>
+        <div class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <a href="pflegedienste.html">Pflegedienste</a>
+        </div>
+      </div>
       <a href="#rechner" style="text-decoration:none; color:var(--ink);">Rechner</a>
       <a href="#faq" style="text-decoration:none; color:var(--ink);">FAQ</a>
       <a href="#kontakt" style="text-decoration:none; color:var(--ink);">Werkstatt &amp; Kontakt</a>
@@ -371,6 +384,25 @@
     e.preventDefault();
     contactForm.hidden = true;
     contactThanks.hidden = false;
+  });
+
+  var navDropdownToggle = document.querySelector("[data-nav-dropdown-toggle]");
+  var navDropdownMenu = document.querySelector("[data-nav-dropdown-menu]");
+  navDropdownToggle.addEventListener("click", function(e){
+    e.stopPropagation();
+    var isOpen = !navDropdownMenu.hidden;
+    navDropdownMenu.hidden = isOpen;
+    navDropdownToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+  document.addEventListener("click", function(){
+    navDropdownMenu.hidden = true;
+    navDropdownToggle.setAttribute("aria-expanded", "false");
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") {
+      navDropdownMenu.hidden = true;
+      navDropdownToggle.setAttribute("aria-expanded", "false");
+    }
   });
 </script>
 </body>
