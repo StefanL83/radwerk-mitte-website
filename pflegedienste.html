@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radwerk Mitte – Pflegedienste</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root{
+    --navy:#10284A; --navy-2:#16305A; --on-navy:#FFFFFF;
+    --orange:#FF6A00; --on-orange:#10284A; --orange-strong:#C2410C; --orange-soft:#FFEDD5;
+    --sun:#FFC93C;
+    --surface:#FFFFFF; --surface-alt:#F4F7FB;
+    --line:#D9E1EB; --line-strong:#B9C4D1;
+    --ink:#10284A; --ink-muted:#5B6B82;
+    --radius-sm:6px; --radius-md:12px; --radius-lg:20px; --radius-xl:32px; --radius-full:9999px;
+    --font-display: Space Grotesk, Arial, sans-serif;
+    --font-sans: DM Sans, Segoe UI, Arial, sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--surface); color:var(--ink); font-family:var(--font-sans); width:100%; max-width:100%; overflow-x:hidden; }
+  h1,h2,h3{ font-family:var(--font-display); font-weight:700; margin:0; text-wrap:balance; }
+  p{ margin:0; }
+  a{ color:var(--orange-strong); }
+  a:hover{ color:var(--navy); }
+  button{ font-family:inherit; cursor:pointer; }
+  .btn{ display:inline-flex; align-items:center; gap:8px; height:52px; padding:0 28px; border-radius:var(--radius-full); font-weight:600; font-size:16px; border:2px solid transparent; white-space:nowrap; text-decoration:none; }
+  .btn-primary{ background:var(--orange); color:var(--on-orange); }
+  .btn-primary:hover{ background:var(--orange-strong); color:#fff; }
+  .btn-outline{ background:transparent; color:var(--ink); border-color:var(--line-strong); }
+  .btn-outline:hover{ border-color:var(--navy); color:var(--navy); }
+  .pill-badge{ display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:6px 12px; border-radius:var(--radius-full); }
+  .badge-orange{ background:var(--orange-soft); color:var(--orange-strong); }
+  .badge-navy{ background:var(--navy); color:var(--on-navy); }
+  .badge-draft{ background:var(--sun); color:var(--navy); }
+  .section{ padding:88px max(16px, env(safe-area-inset-left,0px)); }
+  .section-inner{ max-width:1180px; margin:0 auto; }
+  .eyebrow{ font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--orange-strong); }
+  .card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg); padding:28px; transition:transform .18s ease, box-shadow .18s ease; }
+  .card:hover{ transform:translateY(-4px); box-shadow:0 16px 32px rgba(16,40,74,0.14); }
+  .grid-3{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+  .grid-2{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+  @media (max-width:860px){ .grid-3{ grid-template-columns:1fr; } .grid-2{ grid-template-columns:1fr; } }
+  .nav-dropdown{ position:relative; display:flex; align-items:center; gap:2px; }
+  .nav-dropdown-toggle{ background:none; border:none; padding:4px; font-size:11px; color:var(--ink-muted); line-height:1; }
+  .nav-dropdown-menu{ position:absolute; top:100%; left:0; margin-top:10px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-md); box-shadow:0 16px 32px rgba(16,40,74,0.14); padding:8px; min-width:190px; }
+  .nav-dropdown-menu a{ display:block; padding:8px 12px; border-radius:var(--radius-sm); text-decoration:none; color:var(--ink); font-weight:600; font-size:14px; white-space:nowrap; }
+  .nav-dropdown-menu a:hover{ background:var(--surface-alt); color:var(--navy); }
+</style>
+</head>
+<body>
+<header style="position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--line);">
+  <div style="max-width:1180px; margin:0 auto; padding:14px max(16px, env(safe-area-inset-left,0px)); display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <a href="index.html" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
+        <svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#10284A"/><path d="M45.93 22.25 A17 17 0 1 1 33.48 15.07" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/><circle cx="32" cy="32" r="6" fill="#FF6A00"/></svg>
+        <span style="font-family:var(--font-display); font-weight:700; font-size:20px; color:var(--ink);">radwerk <span style="color:var(--orange-strong);">mitte</span></span>
+      </a>
+      <span class="pill-badge badge-draft">Entwurf</span>
+    </div>
+    <nav style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; font-weight:600; font-size:15px;">
+      <div class="nav-dropdown">
+        <a href="index.html#fuer-unternehmen" style="text-decoration:none; color:var(--ink);">Für Unternehmen</a>
+        <button type="button" class="nav-dropdown-toggle" data-nav-dropdown-toggle aria-haspopup="true" aria-expanded="false" aria-label="Untermenü Für Unternehmen öffnen">▾</button>
+        <div class="nav-dropdown-menu" data-nav-dropdown-menu hidden>
+          <a href="pflegedienste.html">Pflegedienste</a>
+        </div>
+      </div>
+      <a href="index.html#rechner" style="text-decoration:none; color:var(--ink);">Rechner</a>
+      <a href="index.html#faq" style="text-decoration:none; color:var(--ink);">FAQ</a>
+      <a href="index.html#kontakt" style="text-decoration:none; color:var(--ink);">Werkstatt &amp; Kontakt</a>
+      <a href="index.html#kontakt" class="btn btn-primary" style="height:44px; padding:0 20px;">Anfrage stellen</a>
+    </nav>
+  </div>
+</header>
+<section class="section" style="background:var(--navy); color:#fff; padding-top:72px; padding-bottom:72px;">
+  <div class="section-inner" style="max-width:860px; display:flex; flex-direction:column; gap:20px;">
+    <span class="eyebrow" style="color:var(--orange);">Für Pflegedienste</span>
+    <h1 style="font-size:44px; line-height:1.1; color:#fff;">Dienstrad-Leasing für Teams im Schichtbetrieb.</h1>
+    <p style="font-size:18px; line-height:28px; color:#D7E0EC; max-width:70ch;">Ambulante und stationäre Pflegedienste in Kassel und Göttingen stehen vor besonderen Herausforderungen: viele Mitarbeitende, wechselnde Schichten und wenig Zeit für Einzelabstimmung. Diese Seite fasst zusammen, worauf es für Pflegedienste beim Dienstrad-Leasing über Radwerk Mitte besonders ankommt.</p>
+    <div class="pill-badge badge-draft" style="align-self:flex-start;">Entwurf – noch nicht mit Radwerk final abgestimmt</div>
+  </div>
+</section>
+
+<section class="section" id="sammeltermine">
+  <div class="section-inner">
+    <div class="grid-2" style="align-items:stretch;">
+      <div class="card">
+        <div class="pill-badge badge-orange" style="margin-bottom:16px;">Sammeltermine</div>
+        <h2 style="font-size:24px; margin-bottom:12px;">Ausstattung für ganze Teams und Fuhrparks</h2>
+        <p style="color:var(--ink-muted); font-size:15px; line-height:24px;">Statt viele Einzeltermine zu koordinieren, bündelt Radwerk Mitte Übergabe und Einweisung für größere Gruppen in gemeinsamen Terminen – wie schon beim Beispiel eines Klinikums mit 80 ausgestatteten Mitarbeitenden. Für Pflegedienste mit Schichtplänen reduziert das den Koordinationsaufwand für HR und Teamleitungen.</p>
+      </div>
+      <div class="card">
+        <div class="pill-badge badge-orange" style="margin-bottom:16px;">Ein Ansprechpartner-Team</div>
+        <h2 style="font-size:24px; margin-bottom:12px;">Eine Anlaufstelle für die ganze Einrichtung</h2>
+        <p style="color:var(--ink-muted); font-size:15px; line-height:24px;">Anfragen laufen über die Kategorie "B2B-Angebot" im Kontaktformular und werden an ein festes Team weitergeleitet – relevant, wenn mehrere Standorte oder Wohnbereiche einer Pflegeeinrichtung gemeinsam ausgestattet werden sollen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--surface-alt);" id="erreichbarkeit">
+  <div class="section-inner" style="max-width:900px;">
+    <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:24px;">
+      <span class="eyebrow">Erreichbarkeit außerhalb der Öffnungszeiten</span>
+      <h2 style="font-size:30px;">Ehrlich gesagt: kein 24/7-Dauerservice.</h2>
+    </div>
+    <div class="card" style="display:flex; flex-direction:column; gap:14px;">
+      <p style="color:var(--ink-muted); font-size:16px; line-height:25px;">Radwerk Mitte bietet in dieser ersten Ausbaustufe keinen zugesagten Nachtdienst und keinen durchgehenden Chat-Support an. Für Mitarbeitende im Nacht- oder Wochenenddienst bedeutet ein technischer Defekt also aktuell: Reparatur zu den regulären Öffnungszeiten der Werkstatt in Kassel oder Göttingen.</p>
+      <div class="card" style="background:var(--orange-soft); border-color:var(--orange-soft); display:flex; gap:12px; align-items:flex-start;">
+        <span class="pill-badge badge-draft" style="flex:0 0 auto;">Beispielidee</span>
+        <p style="font-size:14px; line-height:21px; color:var(--orange-strong);">Denkbar für die Zukunft wäre ein Ersatzteil-Automat für kleinere Reparaturen außerhalb der Öffnungszeiten. Das ist eine Beispielidee für diese Übung – kein realer Standort und keine bestätigte Planung von Radwerk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="leasingvorteile">
+  <div class="section-inner" style="max-width:900px;">
+    <div style="display:flex; flex-direction:column; gap:14px; margin-bottom:24px;">
+      <span class="eyebrow">Leasing-Vorteile im Schichtbetrieb</span>
+      <h2 style="font-size:30px;">Warum sich ein Dienstrad gerade im Schichtdienst lohnen kann.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3 style="font-size:18px; margin-bottom:8px;">Gehaltsumwandlung</h3>
+        <p style="color:var(--ink-muted); font-size:15px; line-height:23px;">Wie im Leasing-Rechner beschrieben, ergeben sich durch Gehaltsumwandlung Steuer- und Abgabenvorteile, die der Arbeitgeber final ermittelt.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px; margin-bottom:8px;">Service &amp; Versicherung inklusive</h3>
+        <p style="color:var(--ink-muted); font-size:15px; line-height:23px;">Wartung und Reparatur laufen über die Werkstatt vor Ort – ohne separate Terminsuche bei einem externen Händler.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:18px; margin-bottom:8px;">Unabhängig vom Fahrplan</h3>
+        <p style="color:var(--ink-muted); font-size:15px; line-height:23px;">Besonders bei Früh-, Spät- und Nachtschichten mit selteneren Bus- und Bahnverbindungen ist das eigene Dienstrad zeitlich unabhängig vom ÖPNV-Takt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--navy); color:#fff;">
+  <div class="section-inner" style="display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+    <div style="display:flex; flex-direction:column; gap:10px; max-width:60ch;">
+      <h2 style="font-size:26px; color:#fff;">Interesse für deinen Pflegedienst?</h2>
+      <p style="color:#D7E0EC; font-size:16px; line-height:25px;">Stelle eine Anfrage über das allgemeine Kontaktformular mit der Kategorie "B2B-Angebot".</p>
+    </div>
+    <a href="index.html#kontakt" class="btn btn-primary">Anfrage stellen</a>
+  </div>
+</section>
+
+<footer class="section" style="background:var(--navy); color:#fff; padding-top:40px; padding-bottom:40px;">
+  <div class="section-inner">
+    <p style="color:#8CA0BC; font-size:13px;">Seiteninhalt für die Zielgruppe Pflegedienste, Stand 20.10.2026 – Entwurf, noch nicht final mit Radwerk abgestimmt. Die als "Beispielidee" markierten Inhalte sind keine bestätigte Planung.</p>
+  </div>
+</footer>
+
+<script>
+  var navDropdownToggle = document.querySelector("[data-nav-dropdown-toggle]");
+  var navDropdownMenu = document.querySelector("[data-nav-dropdown-menu]");
+  navDropdownToggle.addEventListener("click", function(e){
+    e.stopPropagation();
+    var isOpen = !navDropdownMenu.hidden;
+    navDropdownMenu.hidden = isOpen;
+    navDropdownToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+  document.addEventListener("click", function(){
+    navDropdownMenu.hidden = true;
+    navDropdownToggle.setAttribute("aria-expanded", "false");
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape") {
+      navDropdownMenu.hidden = true;
+      navDropdownToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
+</body>
+</html>
