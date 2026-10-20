@@ -1,0 +1,49 @@
+# Sensible Daten / Zugangsdaten
+# Diese Dateien duerfen niemals ins Repository committed werden.
+
+# Umgebungsvariablen
+.env
+.env.*
+!.env.example
+
+# Zugangsdaten, Schluessel, Zertifikate
+*.key
+*.pem
+*.pfx
+*.p12
+*.cer
+*.crt
+secrets.*
+credentials.*
+*_credentials.*
+*-credentials.*
+config.local.*
+*.local.json
+*.local.yml
+*.local.yaml
+
+# API-Keys / Tokens (falls als Datei abgelegt)
+*apikey*
+*api_key*
+*token*.json
+
+# Backup- und Export-Dateien, die Daten enthalten koennen
+*.bak
+*.backup
+*.sql
+*.sqlite
+*.db
+
+# Betriebssystem- und Editor-Dateien
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Temporaere Dateien
+*.tmp
+*.log
+
+# Projektunterlagen mit vertraulichen Kundeninformationen
+Übung_Kundengespräch_Protokoll.pdf
