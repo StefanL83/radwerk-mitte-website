@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-labelledby="radislav-title radislav-desc">
+<title id="radislav-title">Radislav Radwerk – der fröhliche Fahrrad-Chatbot</title>
+<desc id="radislav-desc">Charmante Comicfigur aus einem auf den Kopf gestellten Fahrrad: Zwei Fahrradreifen bilden die großen Augen, ein Fahrradrahmen das Gesicht und ein Sattel den geschwungenen Schnurrbart.</desc>
+<defs>
+ <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#42e0c3"/><stop offset="0.5" stop-color="#15bba8"/><stop offset="1" stop-color="#008f88"/></linearGradient>
+ <linearGradient id="tire" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3d5058"/><stop offset="0.5" stop-color="#172b34"/><stop offset="1" stop-color="#10242d"/></linearGradient>
+ <linearGradient id="saddle" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4d4349"/><stop offset="0.5" stop-color="#28313a"/><stop offset="1" stop-color="#15252d"/></linearGradient>
+ <linearGradient id="nose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffdd7d"/><stop offset="1" stop-color="#ffae57"/></linearGradient>
+ <filter id="shadow" x="-40%" y="-50%" width="180%" height="200%"><feGaussianBlur stdDeviation="13"/></filter>
+ <filter id="softshadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#1b4750" flood-opacity=".22"/></filter>
+</defs>
+<!-- Ground contact, makes the transparent asset readable on light backgrounds -->
+<ellipse cx="451" cy="777" rx="234" ry="22" fill="#0e4c53" opacity=".14" filter="url(#shadow)"/>
+<!-- Floating decorative sparkles -->
+<g fill="#ffcb64" stroke="#1d333c" stroke-width="6" stroke-linejoin="round" opacity=".92">
+ <path d="M116 379 l10 21 22 9 -22 9 -10 21 -9 -21 -22 -9 22 -9Z"/>
+ <path d="M771 405 l7 15 15 7 -15 7 -7 15 -7 -15 -15 -7 15 -7Z"/>
+</g>
+<g stroke="#1c343b" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<!-- handlebar eyebrows perched over the wheels -->
+ <path d="M224 140 q49 -34 111 -6"/>
+ <path d="M562 134 q59 -29 111 7"/>
+</g>
+<g stroke="#ff876f" stroke-width="19" stroke-linecap="round"><path d="M221 141 l-17 12"/><path d="M674 141 l17 13"/></g>
+<!-- The exposed frame and curved cable run form an upside-down bicycle -->
+<g filter="url(#softshadow)">
+ <path d="M298 299 L451 531 L601 299 M369 414 L532 414 M451 531 L451 600" stroke="#20333c" stroke-width="47" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+ <path d="M298 299 L451 531 L601 299 M369 414 L532 414 M451 531 L451 600" stroke="url(#frame)" stroke-width="31" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+ <path d="M308 315 L451 521 L589 316 M381 406 L520 406 M452 536 L452 577" stroke="#c9fff0" stroke-opacity=".72" stroke-width="7" stroke-linecap="round" fill="none"/>
+</g>
+<!-- little arms with hands made of bicycle grip colors -->
+<g stroke="#20333c" stroke-linecap="round" stroke-linejoin="round" fill="none">
+ <path d="M383 502 Q297 540 249 584" stroke-width="30"/>
+ <path d="M518 502 Q611 543 653 560" stroke-width="30"/>
+</g>
+<g stroke="#10b9a5" stroke-linecap="round" stroke-width="19" fill="none">
+ <path d="M383 502 Q297 540 249 584"/>
+ <path d="M518 502 Q611 543 653 560"/>
+</g>
+<g fill="#ffc96b" stroke="#20333c" stroke-width="11" stroke-linejoin="round">
+ <path d="M245 576 C215 550 188 550 174 569 C151 573 153 603 170 612 C188 645 226 624 241 606Z"/>
+ <path d="M656 546 C675 521 682 497 693 489 C716 475 728 500 715 522 C736 495 756 511 748 532 C766 516 784 536 766 551 C781 554 781 582 753 588 C707 600 676 582 656 566Z"/>
+</g>
+<g fill="none" stroke="#fff1b4" stroke-width="7" stroke-linecap="round" opacity=".8"><path d="M175 579 q23 -12 45 6"/><path d="M695 514 l-13 30"/></g>
+<!-- Wheels are the character's eyes -->
+
+<g id="eye-1">
+<circle cx="294" cy="279" r="124" fill="#152b32" stroke="#1b3038" stroke-width="8"/>
+<circle cx="294" cy="279" r="116" fill="url(#tire)" stroke="#0e242c" stroke-width="15"/>
+<path d="M407.00 279.00 L420.00 279.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M391.86 335.50 L403.12 342.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M350.50 376.86 L357.00 388.12" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M294.00 392.00 L294.00 405.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M237.50 376.86 L231.00 388.12" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M196.14 335.50 L184.88 342.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M181.00 279.00 L168.00 279.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M196.14 222.50 L184.88 216.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M237.50 181.14 L231.00 169.88" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M294.00 166.00 L294.00 153.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M350.50 181.14 L357.00 169.88" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M391.86 222.50 L403.12 216.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<circle cx="294" cy="279" r="96" fill="#eafff8" stroke="#39cdb5" stroke-width="12"/>
+<path d="M377.00 279.00 L387.00 279.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M365.88 320.50 L374.54 325.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M335.50 350.88 L340.50 359.54" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M294.00 362.00 L294.00 372.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M252.50 350.88 L247.50 359.54" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M222.12 320.50 L213.46 325.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M211.00 279.00 L201.00 279.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M222.12 237.50 L213.46 232.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M252.50 207.12 L247.50 198.46" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M294.00 196.00 L294.00 186.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M335.50 207.12 L340.50 198.46" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M365.88 237.50 L374.54 232.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<circle cx="294" cy="279" r="75" fill="#fffefd"/>
+<path d="M243 234 A72 72 0 0 1 332 219" fill="none" stroke="#d9f7eb" stroke-width="11" stroke-linecap="round"/>
+<circle cx="312" cy="290" r="43" fill="#f8bd5a" stroke="#263842" stroke-width="8"/>
+<circle cx="318" cy="293" r="25" fill="#183039"/>
+<circle cx="301" cy="275" r="13" fill="#fff"/>
+<circle cx="331" cy="308" r="6" fill="#fff" opacity=".93"/>
+</g>
+<g id="eye-2">
+<circle cx="606" cy="279" r="124" fill="#152b32" stroke="#1b3038" stroke-width="8"/>
+<circle cx="606" cy="279" r="116" fill="url(#tire)" stroke="#0e242c" stroke-width="15"/>
+<path d="M719.00 279.00 L732.00 279.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M703.86 335.50 L715.12 342.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M662.50 376.86 L669.00 388.12" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M606.00 392.00 L606.00 405.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M549.50 376.86 L543.00 388.12" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M508.14 335.50 L496.88 342.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M493.00 279.00 L480.00 279.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M508.14 222.50 L496.88 216.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M549.50 181.14 L543.00 169.88" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M606.00 166.00 L606.00 153.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M662.50 181.14 L669.00 169.88" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<path d="M703.86 222.50 L715.12 216.00" stroke="#587279" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+<circle cx="606" cy="279" r="96" fill="#eafff8" stroke="#39cdb5" stroke-width="12"/>
+<path d="M689.00 279.00 L699.00 279.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M677.88 320.50 L686.54 325.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M647.50 350.88 L652.50 359.54" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M606.00 362.00 L606.00 372.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M564.50 350.88 L559.50 359.54" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M534.12 320.50 L525.46 325.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M523.00 279.00 L513.00 279.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M534.12 237.50 L525.46 232.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M564.50 207.12 L559.50 198.46" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M606.00 196.00 L606.00 186.00" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M647.50 207.12 L652.50 198.46" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<path d="M677.88 237.50 L686.54 232.50" stroke="#b3d9d0" stroke-width="4" opacity=".9"/>
+<circle cx="606" cy="279" r="75" fill="#fffefd"/>
+<path d="M555 234 A72 72 0 0 1 644 219" fill="none" stroke="#d9f7eb" stroke-width="11" stroke-linecap="round"/>
+<circle cx="624" cy="290" r="43" fill="#f8bd5a" stroke="#263842" stroke-width="8"/>
+<circle cx="630" cy="293" r="25" fill="#183039"/>
+<circle cx="613" cy="275" r="13" fill="#fff"/>
+<circle cx="643" cy="308" r="6" fill="#fff" opacity=".93"/>
+</g>
+<!-- cheek dimples, framed by colorful fasteners -->
+<g fill="#ff887a" opacity=".9"><ellipse cx="284" cy="435" rx="38" ry="17" transform="rotate(-18 284 435)"/><ellipse cx="615" cy="435" rx="38" ry="17" transform="rotate(18 615 435)"/></g>
+<g stroke="#20343d" stroke-width="9" stroke-linecap="round" fill="none"><path d="M246 419 q-14 5 -18 17"/><path d="M653 419 q14 5 18 17"/></g>
+<!-- A bike bell doubles as a round nose -->
+<g filter="url(#softshadow)">
+ <path d="M444 429 l0 -36" stroke="#1c313a" stroke-width="17" stroke-linecap="round"/>
+ <circle cx="450" cy="462" r="48" fill="url(#nose)" stroke="#1e3138" stroke-width="11"/>
+ <path d="M431 443 q18 -21 39 -7" fill="none" stroke="#fff0b5" stroke-width="10" stroke-linecap="round"/>
+ <circle cx="478" cy="468" r="6" fill="#f59364"/>
+</g>
+<!-- downward-facing saddle: mustache and warm smiling mouth -->
+<path d="M419 617 Q449 641 481 617" fill="none" stroke="#1e3039" stroke-width="10" stroke-linecap="round"/>
+<path d="M426 626 Q450 651 477 625 Q466 674 450 676 Q434 672 426 626Z" fill="#f07776" stroke="#1e313a" stroke-width="7" stroke-linejoin="round"/>
+<g filter="url(#softshadow)">
+ <path d="M451 594 C416 574 381 568 346 573 C332 576 327 594 338 610 C347 626 368 634 390 631 C415 627 428 611 450 606 C473 611 493 630 518 632 C550 635 575 620 578 596 C579 580 566 571 549 572 C506 569 477 574 451 594Z" fill="url(#saddle)" stroke="#172a33" stroke-width="12" stroke-linejoin="round"/>
+ <path d="M349 585 C381 575 410 585 431 596 M470 593 C497 578 540 580 559 589" stroke="#899195" stroke-opacity=".65" stroke-width="7" stroke-linecap="round" fill="none"/>
+</g>
+<!-- saddle rivets, classic leather detail -->
+<circle cx="357" cy="598" r="5" fill="#ffca72"/><circle cx="553" cy="598" r="5" fill="#ffca72"/>
+<!-- fork bolts = beauty spots -->
+<g fill="#ffe0a0" stroke="#18323b" stroke-width="5"><circle cx="369" cy="415" r="10"/><circle cx="530" cy="415" r="10"/></g>
+<!-- whimsical small bike bell near right brow -->
+<g transform="translate(705 172) rotate(19)">
+ <path d="M-6 12 L-18 -9" stroke="#18343d" stroke-width="9" stroke-linecap="round"/>
+ <circle cx="0" cy="0" r="18" fill="#ffcf67" stroke="#1a333c" stroke-width="7"/>
+ <path d="M-8 -7 q7 -6 14 -1" fill="none" stroke="#fff6bb" stroke-width="4" stroke-linecap="round"/>
+</g>
+<!-- signal streaks add character without extra animation dependencies -->
+<g stroke="#ffb95c" stroke-width="9" stroke-linecap="round"><path d="M756 155 l14 -10"/><path d="M764 181 l17 -1"/></g>
+</svg>
