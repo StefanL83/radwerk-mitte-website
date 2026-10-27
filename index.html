@@ -421,6 +421,20 @@
       closeNavDropdown();
     }
   });
-</script><link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" /><script type="module"> import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/chat.bundle.es.js';  createChat({    webhookUrl: 'https://ki-bta.app.n8n.cloud/webhook/97c0038b-ee64-43be-88ff-929da21d0783/chat',    initialMessages: ['Hallo, ich bin die Assistenz von Stefan.', 'Wie kann ich helfen?'],    i18n: { en: { title: 'Assistenz', subtitle: 'Fragen zu meinem Profil.', footer: '', getStarted: 'Neues Gespräch', inputPlaceholder: 'Ihre Frage ...' } },  });</script>
+</script><style>
+  :root{
+    --chat--color-primary:#13bba5; --chat--color-primary-shade-50:#0f9f8d; --chat--color-primary-shade-100:#0c8275;
+    --chat--color-secondary:#ffcf6c; --chat--color-secondary-shade-50:#ffc250;
+    --chat--color-white:#ffffff; --chat--color-light:#f5faf6; --chat--color-light-shade-50:#e9f3ee; --chat--color-light-shade-100:#dce9e5;
+    --chat--color-medium:#bcd2c9; --chat--color-dark:#20333c; --chat--color-disabled:#8a9a98; --chat--color-typing:#4e636a;
+    --chat--border-radius:14px;
+    --chat--window--width:395px; --chat--window--height:580px;
+    --chat--header--background:#20333c; --chat--header--color:#ffffff; --chat--heading--font-size:1.3em;
+    --chat--message--bot--background:#f0f6f4; --chat--message--bot--color:#20333c;
+    --chat--message--user--background:#13bba5; --chat--message--user--color:#ffffff;
+    --chat--toggle--background:#13bba5; --chat--toggle--hover--background:#0f9f8d; --chat--toggle--active--background:#0c8275;
+    --chat--toggle--color:#ffffff; --chat--toggle--size:64px;
+  }
+</style><link href="https://cdn.jsdelivr.net/npm/@n8n/chat/style.css" rel="stylesheet" /><script type="module"> import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/chat.bundle.es.js';  createChat({    webhookUrl: 'https://ki-bta.app.n8n.cloud/webhook/97c0038b-ee64-43be-88ff-929da21d0783/chat',    initialMessages: ['Hallo, ich bin Radislav! 🚲 Dein Fahrrad-Kumpel von Radwerk.', 'Wie kann ich helfen?'],    i18n: { en: { title: 'Radislav Radwerk', subtitle: 'Dein digitaler Fahrrad-Kumpel', footer: '', getStarted: 'Neues Gespräch', inputPlaceholder: 'Frag mich etwas ...' } },  });</script>
 </body>
 </html>
